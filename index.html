@@ -1681,7 +1681,7 @@ body.modal-open{overflow:hidden;}
           <p class="case__desc">A complete HR database, workforce analytics and compliance system built in Excel — one source of truth for employee records, attendance, leave, payroll, documents and compliance, replacing scattered spreadsheets.</p>
           <div class="case__cols">
             <div class="case__col"><h5>Problem</h5><p>HR information fragments across attendance, leave, payroll, documents and compliance registers, with no single live view of workforce risk.</p></div>
-            <div class="case__col"><h5>Solution</h5><p>A structured data layer feeding a live HR Command Center dashboard — modeled on the same 4-zone field structure I run day to day at AS Power Solutions.</p></div>
+            <div class="case__col"><h5>Solution</h5><p>A structured data layer — Employee Master through Payroll — feeding a single live HR Command Center dashboard, with statutory PF/ESI rules built in.</p></div>
           </div>
           <div class="case__tools">
             <span class="tool-chip" style="--tint:#2563EB">Excel</span>
@@ -2674,7 +2674,7 @@ body.modal-open{overflow:hidden;}
     <div class="quickfacts">
       <div class="quickfact"><strong>Architecture</strong><span>7 data sheets feeding 1 live dashboard</span></div>
       <div class="quickfact"><strong>Sample Data</strong><span>36 employees (portfolio demonstration)</span></div>
-      <div class="quickfact"><strong>Structure</strong><span>Same 4-zone model as my AMC role</span></div>
+      <div class="quickfact"><strong>Reporting Period</strong><span>Aug-2026, last updated 31 Aug 2026</span></div>
       <div class="quickfact"><strong>Status</strong><span>HR Command Center live · 4 more dashboards planned</span></div>
     </div>
     <h4 class="tab-h">Business Context</h4>
@@ -2687,7 +2687,7 @@ body.modal-open{overflow:hidden;}
       <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>Payroll calculations (PF, ESI, LOP, OT) done by hand are slow and error-prone at scale</span></div>
     </div>
     <h4 class="tab-h">Solution</h4>
-    <p>A structured data layer — Employee Master, Attendance, Leave Tracker, OT Tracker, Document Tracker, Expiry Tracker and Payroll — all linked by Employee ID, with statutory PF (12%) and ESI (0.75%, ₹21,000 wage ceiling) rules built into the payroll formulas. The HR Command Center dashboard reads live from all seven sheets.</p>
+    <p>A structured data layer — Employee Master, Attendance, Leave Tracker, OT Tracker, Document Tracker, Expiry Tracker and Payroll — all linked by Employee ID, with statutory PF (12%) and ESI (0.75%, ₹21,000 wage ceiling) rules built into the payroll formulas. The HR Command Center dashboard reads live from all seven sheets — nothing on it is hardcoded.</p>
   </div>
 
   <div class="tab-panel" data-tab="data" data-tab-label="Data">
@@ -2717,34 +2717,38 @@ body.modal-open{overflow:hidden;}
     <h4 class="tab-h">Sample Payroll Records — Jul-26</h4>
     <div class="data-compare">
       <div class="data-compare__col">
-        <h5>Vijay — Zone 1, Water Ops</h5>
+        <h5>Murugesan P — Human Resources</h5>
         <table>
           <tr><td>Basic / Gross</td><td>₹15,656 / ₹21,150</td></tr>
           <tr><td>Present Days</td><td>26</td></tr>
           <tr><td>PF Deduction</td><td>₹1,878.72</td></tr>
-          <tr><td>Net Pay</td><td>₹19,271.28</td></tr>
+          <tr><td>Net Pay</td><td>₹19,451.28</td></tr>
         </table>
       </div>
       <div class="data-compare__col">
-        <h5>Murugesan P — Zone 2, Water Ops</h5>
+        <h5>Vijay K — Finance &amp; Accounts</h5>
         <table>
-          <tr><td>Basic / Gross</td><td>₹12,590 / ₹17,000</td></tr>
-          <tr><td>Present Days</td><td>26</td></tr>
-          <tr><td>PF + ESI</td><td>₹1,638.30</td></tr>
-          <tr><td>Net Pay</td><td>₹15,361.70</td></tr>
+          <tr><td>Basic / Gross</td><td>₹23,632 / ₹31,900</td></tr>
+          <tr><td>Present Days</td><td>23</td></tr>
+          <tr><td>PF Deduction</td><td>₹2,835.84</td></tr>
+          <tr><td>Net Pay</td><td>₹29,544.16</td></tr>
         </table>
       </div>
     </div>
-    <h4 class="tab-h">Workforce Structure — Same 4 Zones as My AMC Role</h4>
+    <h4 class="tab-h">Workforce Structure — Sample Roster</h4>
     <ul class="bullet-list">
-      <li>Zone 1 – Water Ops — 10 employees</li>
-      <li>Zone 2 – Water Ops — 8 employees</li>
-      <li>Zone 3 – Water Ops — 7 employees</li>
-      <li>Zone 4 – Water Ops — 6 employees</li>
-      <li>Billing &amp; Revenue — 2 employees</li>
-      <li>HR &amp; Admin — 2 employees</li>
-      <li>Technical &amp; Maintenance — 1 employee</li>
+      <li>Human Resources — 4 employees</li>
+      <li>Finance &amp; Accounts — 4 employees</li>
+      <li>Administration — 4 employees</li>
+      <li>Operations — 4 employees</li>
+      <li>Sales &amp; Marketing — 4 employees</li>
+      <li>IT &amp; Systems — 4 employees</li>
+      <li>Procurement — 3 employees</li>
+      <li>Quality Control — 3 employees</li>
+      <li>Maintenance — 3 employees</li>
+      <li>Customer Support — 3 employees</li>
     </ul>
+    <p class="tab-sub" style="margin-top:8px;">The department list also carries the same Zone 1–4 (Water Ops), Billing &amp; Revenue and Technical &amp; Maintenance options I use at AS Power Solutions — available as dropdown values, though this particular sample roster is built on a generic corporate structure.</p>
   </div>
 
   <div class="tab-panel" data-tab="dashboard" data-tab-label="Dashboard">
@@ -2754,7 +2758,7 @@ body.modal-open{overflow:hidden;}
       <div class="kpi-card"><div class="kpi-card__value">36</div><div class="kpi-card__label">Employees in Roster</div></div>
       <div class="kpi-card"><div class="kpi-card__value">33</div><div class="kpi-card__label">Active</div></div>
       <div class="kpi-card"><div class="kpi-card__value up">86.9%</div><div class="kpi-card__label">Attendance (Period)</div></div>
-      <div class="kpi-card"><div class="kpi-card__value">68.1%</div><div class="kpi-card__label">Compliance Score</div></div>
+      <div class="kpi-card"><div class="kpi-card__value">54.4%</div><div class="kpi-card__label">Compliance Score</div></div>
       <div class="kpi-card"><div class="kpi-card__value">₹8.27L</div><div class="kpi-card__label">Gross Payroll (Jul-26)</div></div>
       <div class="kpi-card"><div class="kpi-card__value down">6</div><div class="kpi-card__label">Critical Alerts</div></div>
     </div>
@@ -2782,10 +2786,10 @@ body.modal-open{overflow:hidden;}
     </div>
     <h4 class="tab-h">Compliance Alerts</h4>
     <ul class="bullet-list">
-      <li>5 documents expired</li>
-      <li>1 document due within 7 days</li>
+      <li>6 documents expired</li>
+      <li>0 documents due within 7 days</li>
       <li>5 documents due within 30 days</li>
-      <li>32 document gaps flagged across the roster</li>
+      <li>41 document gaps flagged across the roster</li>
     </ul>
   </div>
 
@@ -2814,11 +2818,11 @@ body.modal-open{overflow:hidden;}
     <div class="insight-list">
       <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>Active headcount is 33 employees, with 3 joining in the last 30 days</span></div>
       <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>Attendance stood at 86.9% across all logged working days, with 13 late instances</span></div>
-      <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>Latest payroll run totals ₹8.3L gross, with ₹11.3K in overtime</span></div>
+      <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>Latest payroll run totals ₹8.3L gross, with ₹9.3K in overtime</span></div>
       <div class="insight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg><span>6 employees need urgent document or licence renewal</span></div>
     </div>
-    <h4 class="tab-h">Built on My Real Operating Structure</h4>
-    <p>The 36 sample employees are organized across the same Zone 1–4 water-supply structure I coordinate at AS Power Solutions, plus Billing &amp; Revenue, HR &amp; Admin and Technical &amp; Maintenance — so the toolkit reflects the workforce shape I actually manage, not a generic org chart.</p>
+    <h4 class="tab-h">Configurable, Not Hardcoded</h4>
+    <p>Every dropdown value and assumption — departments, designations, employment types, and the PF/ESI/shift-time settings that drive payroll — lives in one Lists sheet. Changing a rate there updates every linked sheet, including this dashboard.</p>
   </div>
 
   <div class="tab-panel" data-tab="impact" data-tab-label="Impact">
